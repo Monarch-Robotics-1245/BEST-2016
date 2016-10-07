@@ -20,9 +20,12 @@
 |*                                                                                                    *|
 |*    MOTORS & SENSORS:                                                                               *|
 |*    [I/O Port]              [Name]              [Type]              [Description]                   *|
-|*    Motor - Port 2          rightMotor           VEX Motor           Right motor                    *|
-|*    Motor - Port 3          leftMotor            VEX Motor           Left motor                     *|
-|*    Motor - Port 6          boomMotor             VEX Motor           Arm motor                      *|
+|*    Motor - Port 2          rightMotor          VEX Motor           Right motor                     *|
+|*    Motor - Port 3          leftMotor           VEX Motor           Left motor                      *|
+|*    Motor - Port 4          boomMotor           VEX Motor           Boom Extension Control          *|
+|*		Motor - Port 6					cornGrabber					Servo								Corn Grabber										*|
+|*		Motor - Port 7					seedControl					Servo								Seed Door Control								*|
+|*		Motor - Port 8					cornDoor						Servo								Corn Bay Door Control						*|
 So seed needs to stay closed until opened,so we can drive along to planting
 Then, when opened, needs to stay opened until closed so we can drive along planting
 Then, when closed, needs to stay closed until opened so we can drive back and get more seeds
@@ -68,7 +71,7 @@ task main()
 			if(gripState < openLimit){
 				gripState += 5;
 				delay(25);
-		}
+			}
 
 		}
 		else if(vexRT[Btn7D] == 1 && vexRT[Btn7R] == 1)
