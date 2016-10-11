@@ -37,7 +37,9 @@ make a seedState variable to store needed position, have button presses change i
 //this var manages position of seedHopper, so don't have to hold it open while driving.
 int seedState = -25;
 int cornState = -120;
-int openLimit = 120, closeLimit = -114, gripState = -107;
+int openLimit = 120;
+int closeLimit = -114;
+int gripState = -107;
 
 task main()
 {
