@@ -38,6 +38,7 @@ make a seedState variable to store needed position, have button presses change i
 int seedState = -25;
 int cornState = -120;
 int openLimit = 120, closeLimit = -114, gripState = -107;
+
 task main()
 {
 
@@ -56,6 +57,7 @@ task main()
 		motor[cornDoor] = cornState;
 
 		//Seed door control
+		//Seed control
 		if(vexRT[Btn8D] == 1 && vexRT[Btn8L] == 1)//Right Side Down/Left Buttons
 		{
 			seedState *= -1;
@@ -63,6 +65,7 @@ task main()
 			//added this to prevent rapid oscillation between states, buffer zone
 		}
 		motor[seedControl] = 95 + seedState;
+		motor[seedControl] = -60 + seedState;
 
 		//Corn Grabber Control
 		if(vexRT[Btn7U] == 1 && vexRT[Btn7L] == 1)//Left Side Up/Left Buttons
