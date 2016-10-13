@@ -67,7 +67,6 @@ task main()
 			//added this to prevent rapid oscillation between states, buffer zone
 		}
 		motor[seedControl] = 95 + seedState;
-		motor[seedControl] = -60 + seedState;
 
 		//Corn Grabber Control
 		if(vexRT[Btn7U] == 1 && vexRT[Btn7L] == 1)//Left Side Up/Left Buttons
