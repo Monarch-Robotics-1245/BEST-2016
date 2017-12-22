@@ -47,8 +47,8 @@ task main()
 	while(1 == 1)
 	{
 		//Driving Motor Control
-		motor[leftMotor] = vexRT[Ch3] / 2;//Left Joystick Up/Down
-		motor[rightMotor] = vexRT[Ch2] / 2;//Right Joystick Up/Down
+		motor[leftMotor] = vexRT[Ch3];//Left Joystick Up/Down
+		motor[rightMotor] = vexRT[Ch2];//Right Joystick Up/Down
 
 		//Corn Door  Control
 		if(vexRT[Btn8U] == 1 && vexRT[Btn8R] == 1)//Right Side Up/Right Buttons
